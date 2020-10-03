@@ -39,7 +39,10 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <p className="App-intro">Seconds since disaster: {this.state.time}</p>
+          <div className="container">
+            <p className="prefix">Seconds since disaster: </p>
+            <p className="timer">{this.state.time}</p>
+          </div>
         </header>
       </div>
     );
