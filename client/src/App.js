@@ -39,8 +39,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <p className="App-intro">{this.state.time}</p>
-          <p>Hello Boozer!</p>
+          <p className="App-intro">Seconds since disaster: {this.state.time}</p>
         </header>
       </div>
     );
