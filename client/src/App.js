@@ -26,7 +26,7 @@ class App extends Component {
       var href = window.location.href;
       var url = href.substring(0, href.length - 6);
       console.log(url);
-      fetch(`${url}:9000/timer/`)
+      fetch(`http://3.10.159.115/:9000/timer/`)
         .then((res) => res.text())
         .then((res) => {
           var time = JSON.parse(res).timerValue;
