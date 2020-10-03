@@ -35,3 +35,18 @@ router.get("/", function (req, res, next) {
 });
 
 module.exports = router;
+
+var mqtt = require("mqtt");
+var client = mqtt.connect("mqtt://3.10.159.115:51041", {
+  username: "user1",
+  password: "pass",
+});
+client.on("connect", () => {
+  console.log("connected");
+
+  client.subscribe("reset-timer", () => {
+    client.on("message", (topic, message, packet) => {
+      timerValue = 0;
+    });
+  });
+});
